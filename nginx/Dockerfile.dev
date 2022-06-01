@@ -1,0 +1,4 @@
+# base image:
+FROM nginx
+# COPY default.conf file into the file system of this image. Overwrite this existing one
+COPY ./default.conf /etc/nginx/conf.d/default.conf
