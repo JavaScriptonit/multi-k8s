@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4f3a47-6a4b-4435-a0d2-d41d93bf3329" name="Changes" comment="adding unversioned files">
+    <list default="true" id="ad4f3a47-6a4b-4435-a0d2-d41d93bf3329" name="Changes" comment="adding .gitignore">
+      <change afterPath="$PROJECT_DIR$/k8s/ingress-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="2BwhN1aqfe8hUqRgTbS0jDpK4Ta" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -26,11 +28,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="adding unversioned files">
       <created>1657617937135</created>
@@ -39,8 +46,26 @@
       <option name="project" value="LOCAL" />
       <updated>1657617937135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding .gitignore">
+      <created>1657618639503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657618639503</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad4f3a47-6a4b-4435-a0d2-d41d93bf3329" name="Changes" comment="adding .gitignore" />
+      <created>1657823013959</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657823013959</updated>
+      <workItem from="1657823017601" duration="649000" />
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -56,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding unversioned files" />
+    <MESSAGE value="adding .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding .gitignore" />
   </component>
 </project>
