@@ -1,0 +1,37 @@
+sudo: required # use of Docker
+services:
+  - docker
+before_install:
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud auth activate-service-account --key-file service-account.json
+
+
+#script:
+#  - docker run -e CI=true javascriptonit/react-test npm test
+#
+#after_success:
+#  - docker build -t javascriptonit/multi-client ./client
+#  - docker build -t javascriptonit/multi-nginx ./nginx
+#  - docker build -t javascriptonit/multi-server ./server
+#  - docker build -t javascriptonit/multi-worker ./worker
+#  # Log in to the Docker CLI
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+#  # Take those images and push them to Docker hub
+#  - docker push javascriptonit/multi-client
+#  - docker push javascriptonit/multi-nginx
+#  - docker push javascriptonit/multi-server
+#  - docker push javascriptonit/multi-worker
+#
+#deploy:
+#  provider: elasticbeanstalk
+#  region: 'us-east-1'
+#  app: 'multi-docker'
+#  env: 'MultiDocker-env'
+#  bucket_name: 'elasticbeanstalk-us-east-1-623713703545'
+#  bucket_path: 'docker-multi'
+#  on:
+#    branch: master
+#  access_key_id: $AWS_ACCESS_KEY # Travis Keys Update in lecture/15422768
+#  secret_access_key: $AWS_SECRET_KEY # Travis Keys Update in lecture/15422768
