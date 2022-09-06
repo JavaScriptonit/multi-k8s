@@ -6,7 +6,9 @@ before_install:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
-
+  - gcloud config set project id # id from Google Cloud project
+  - gcloud config set compute/zone us-central1-a # copy location from Google Cloud Kubernetes Cluster
+  - gcloud container clusters set get-credentials multi-cluster # copy name from Google Cloud Kubernetes Cluster
 
 #script:
 #  - docker run -e CI=true javascriptonit/react-test npm test

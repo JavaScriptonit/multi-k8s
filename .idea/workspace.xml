@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4f3a47-6a4b-4435-a0d2-d41d93bf3329" name="Changes" comment="adding ingress-service.yaml&#10;lesson 15&#10;videos 248-252&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11582352#overview">
-      <change afterPath="$PROJECT_DIR$/k8s/.travis.yml" afterDir="false" />
+    <list default="true" id="ad4f3a47-6a4b-4435-a0d2-d41d93bf3329" name="Changes" comment="adding .travis.yml&#10;lesson 16&#10;videos 269-271&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/18296716#overview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,8 @@
       <workItem from="1657826858057" duration="976000" />
       <workItem from="1657894698979" duration="17000" />
       <workItem from="1659511613345" duration="1167000" />
-      <workItem from="1660585932241" duration="1313000" />
+      <workItem from="1660585932241" duration="1448000" />
+      <workItem from="1662485885385" duration="303000" />
     </task>
     <task id="LOCAL-00003" summary="adding ingress-service.yaml&#10;lesson 15&#10;videos 248-252&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11582352#overview">
       <created>1657823717049</created>
@@ -74,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657823717049</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding .travis.yml&#10;lesson 16&#10;videos 269-271&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/18296716#overview">
+      <created>1660587383581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660587383581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +104,7 @@
     <MESSAGE value="adding unversioned files" />
     <MESSAGE value="adding .gitignore" />
     <MESSAGE value="adding ingress-service.yaml&#10;lesson 15&#10;videos 248-252&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11582352#overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding ingress-service.yaml&#10;lesson 15&#10;videos 248-252&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11582352#overview" />
+    <MESSAGE value="adding .travis.yml&#10;lesson 16&#10;videos 269-271&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/18296716#overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding .travis.yml&#10;lesson 16&#10;videos 269-271&#10;https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/18296716#overview" />
   </component>
 </project>
