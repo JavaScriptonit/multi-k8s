@@ -1,0 +1,33 @@
+sudo: required # use of Docker
+services:
+  - docker
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1 # disable warnings which are waiting for answers (y/n?)
+before_install:
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud config set project id # id from Google Cloud project
+  - gcloud config set compute/zone us-central1-a # copy location from Google Cloud Kubernetes Cluster
+  - gcloud container clusters set get-credentials multi-cluster # copy name from Google Cloud Kubernetes Cluster
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t javascriptonit/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+- docker run -e CI=true javascriptonit/react-test npm test
+
+deploy:
+  provider: script # uses own script unless elasticbeanstalk version
+  script: bash ./deploy.sh
+  on:
+    branch: master
+    #  region: 'us-east-1'
+    #  app: 'multi-docker'
+    #  env: 'MultiDocker-env'
+    #  bucket_name: 'elasticbeanstalk-us-east-1-623713703545'
+    #  bucket_path: 'docker-multi'
+    #  access_key_id: $AWS_ACCESS_KEY # Travis Keys Update in lecture/15422768
+    #  secret_access_key: $AWS_SECRET_KEY # Travis Keys Update in lecture/15422768
