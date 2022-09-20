@@ -1,35 +1,51 @@
-apiVersion: networking.k8s.io/v1
-# UPDATE API
+apiVersion: networking.k8s.io/v1 # UPDATE API
 kind: Ingress
 metadata:
   name: ingress-service
   annotations:
     kubernetes.io/ingress.class: 'nginx'
-    nginx.ingress.kubernetes.io/use-regex: 'true'
-    # ADD ANNOTATION
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
-    # UPDATE ANNOTATION
+    nginx.ingress.kubernetes.io/use-regex: 'true' # ADD ANNOTATION
+    nginx.ingress.kubernetes.io/rewrite-target: /$1 # UPDATE ANNOTATION
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
+  tls:
+    - hosts:
+        - k8s-multi.com
+        - www.k8s-multi.com
+      secretName: k8s-multi-com
   rules:
-    - http:
+    - host: k8s-multi.com
+      http:
         paths:
-          - path: /?(.*)
-            # UPDATE PATH
-            pathType: Prefix
-            # ADD PATHTYPE
+          - path: /?(.*) # UPDATE PATH
+            pathType: Prefix # ADD PATHTYPE
             backend:
-              service:
-                # UPDATE SERVICE FIELDS
+              service: # UPDATE SERVICE FIELDS
                 name: client-cluster-ip-service
                 port:
                   number: 3000
-          - path: /api/?(.*)
-            # UPDATE PATH
-            pathType: Prefix
-            # ADD PATHTYPE
+          - path: /api/?(.*) # UPDATE PATH
+            pathType: Prefix # ADD PATHTYPE
             backend:
-              service:
-                # UPDATE SERVICE FIELDS
+              service: # UPDATE SERVICE FIELDS
+                name: server-cluster-ip-service
+                port:
+                  number: 5000
+    - host: www.k8s-multi.com
+      http:
+        paths:
+          - path: /?(.*) # UPDATE PATH
+            pathType: Prefix # ADD PATHTYPE
+            backend:
+              service: # UPDATE SERVICE FIELDS
+                name: client-cluster-ip-service
+                port:
+                  number: 3000
+          - path: /api/?(.*) # UPDATE PATH
+            pathType: Prefix # ADD PATHTYPE
+            backend:
+              service: # UPDATE SERVICE FIELDS
                 name: server-cluster-ip-service
                 port:
                   number: 5000
